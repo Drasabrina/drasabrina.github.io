@@ -622,35 +622,21 @@ function renderRevisao(){
   });
 
   html += '<div class="note">'+LEMBRETES+'</div>';
+  html += '<div class="status" id="status" style="text-align:center;margin-top:14px"></div>';
   app.innerHTML = html;
   app.querySelectorAll("[data-goto]").forEach(b=>{
     b.addEventListener("click", ()=>{ step = parseInt(b.dataset.goto,10); render(); });
   });
   btnBack.style.display = "";
-  btnNext.textContent = "Enviar PDF para a Dra. Sabrina";
+  btnNext.disabled = false;
+  btnNext.textContent = ROTULO_ENVIAR;
 }
 
+const ROTULO_ENVIAR = "Enviar PDF para a Dra. Sabrina";
 let enviada = false;
 
 function renderFim(){
-  stepCount.textContent = enviada ? "Enviada" : "Envio";
-
-  if(!enviada){
-    app.innerHTML =
-      '<div class="done">' +
-        '<h2>Pronto para enviar</h2>' +
-        '<p>Ao enviar, a ficha chega direto para a Dra. Sabrina. Você não precisa fazer mais nada.</p>' +
-        '<div class="stack">' +
-          '<button class="btn btn-primary" id="btnEnviar" type="button">Enviar PDF para a Dra. Sabrina</button>' +
-          '<button class="btn btn-ghost" id="btnEdit" type="button">Voltar e corrigir alguma resposta</button>' +
-        '</div>' +
-        '<div class="status" id="status"></div>' +
-        '<div class="note" style="margin-top:20px;text-align:left">'+LEMBRETES+'</div>' +
-      '</div>';
-    document.getElementById("btnEnviar").addEventListener("click", enviarFicha);
-    document.getElementById("btnEdit").addEventListener("click", ()=>{ step = LAST; render(); });
-    return;
-  }
+  stepCount.textContent = "Enviada";
 
   app.innerHTML =
     '<div class="done">' +
@@ -706,7 +692,7 @@ function montarEnvio(){
 
 async function enviarFicha(){
   const st = document.getElementById("status");
-  const btn = document.getElementById("btnEnviar");
+  const btn = btnNext;
   st.className = "status";
 
   if(!ENDPOINT){
@@ -735,7 +721,7 @@ async function enviarFicha(){
       concluirEnvio();
     }catch(e2){
       btn.disabled = false;
-      btn.textContent = "Enviar PDF para a Dra. Sabrina";
+      btn.textContent = ROTULO_ENVIAR;
       st.className = "status err";
       st.textContent = "Não consegui enviar agora. Verifique a internet e tente de novo.";
     }
@@ -744,7 +730,10 @@ async function enviarFicha(){
 
 function concluirEnvio(){
   enviada = true;
+  btnNext.disabled = false;
+  btnNext.textContent = ROTULO_ENVIAR;
   try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+  step = DONE;
   render();
 }
 
@@ -757,6 +746,7 @@ btnNext.addEventListener("click", ()=>{
   if(step >= 1 && step <= SECTIONS.length){
     if(!validar(SECTIONS[step-1])) return;
   }
+  if(step === LAST){ enviarFicha(); return; }
   step++;
   render();
 });
