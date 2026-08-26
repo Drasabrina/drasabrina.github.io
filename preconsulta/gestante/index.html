@@ -1,1 +1,1049 @@
-temporario
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ficha de pré-consulta da Dra. Sabrina Gois Santos — pediatria e homeopatia.">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<title>Pré-Consulta da Gestante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;600;700&display=swap">
+
+<style>
+:root{
+  --ground:#FBF6F4;
+  --surface:#FFFFFF;
+  --surface-2:#F6EDEA;
+  --ink:#3B2E27;
+  --ink-soft:#7A6960;
+  --ink-faint:#A0908A;
+  --line:#E7D9D4;
+  --accent:#9C6F74;
+  --accent-deep:#7E555B;
+  --accent-soft:#F7D9D7;
+  --on-accent:#FFFFFF;
+  --gold:#A77343;
+  --ok:#5E7F63;
+  --shadow:0 1px 2px rgba(59,46,39,.05), 0 12px 32px -18px rgba(59,46,39,.28);
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#19140F;
+    --surface:#221B16;
+    --surface-2:#2C231D;
+    --ink:#F2E8E1;
+    --ink-soft:#BFAFA6;
+    --ink-faint:#8E7D74;
+    --line:#3A2E27;
+    --accent:#D7A9AD;
+    --accent-deep:#EBC6C8;
+    --accent-soft:#3E2C2C;
+    --on-accent:#241C17;
+    --gold:#C79B6A;
+    --ok:#9BBFA0;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 32px -18px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#19140F;
+  --surface:#221B16;
+  --surface-2:#2C231D;
+  --ink:#F2E8E1;
+  --ink-soft:#BFAFA6;
+  --ink-faint:#8E7D74;
+  --line:#3A2E27;
+  --accent:#D7A9AD;
+  --accent-deep:#EBC6C8;
+  --accent-soft:#3E2C2C;
+  --on-accent:#241C17;
+  --gold:#C79B6A;
+  --ok:#9BBFA0;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 32px -18px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Karla","Helvetica Neue",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+button{font:inherit;color:inherit}
+
+/* ---------- topo ---------- */
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{
+  max-width:640px;margin:0 auto;padding:14px 20px 10px;
+  display:flex;flex-direction:column;gap:9px;
+}
+.brand{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+}
+.brand-name{
+  font-family:"Lora",Georgia,"Times New Roman",serif;
+  font-size:15px;letter-spacing:.01em;
+}
+.brand-name span{color:var(--ink-soft);font-family:"Karla",sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:1px}
+.step-count{
+  font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-faint);
+  font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.rail{height:3px;background:var(--line);border-radius:2px;overflow:hidden}
+.rail-fill{height:100%;width:0;background:var(--accent);border-radius:2px;transition:width .35s cubic-bezier(.4,0,.2,1)}
+
+/* ---------- conteúdo ---------- */
+main{max-width:640px;margin:0 auto;padding:26px 20px 120px}
+
+.intro-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;box-shadow:var(--shadow);
+}
+.intro-card h1{
+  font-family:"Lora",Georgia,"Times New Roman",serif;font-weight:600;font-size:30px;line-height:1.15;
+  margin:6px 0 12px;text-wrap:balance;
+}
+.intro-card h1 em{font-style:italic;color:var(--accent-deep)}
+.intro-card p{color:var(--ink-soft);margin:0 0 14px}
+.eyebrow{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;
+}
+.intro-list{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.intro-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink-soft)}
+.intro-list li b{color:var(--ink);font-weight:600}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--accent);margin-top:8px;flex:none}
+
+.section-head{margin:0 0 20px}
+.section-head .kicker{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;
+}
+.section-head h2{
+  font-family:"Lora",Georgia,"Times New Roman",serif;font-weight:600;font-size:25px;line-height:1.2;
+  margin:6px 0 6px;text-wrap:balance;
+}
+.section-head p{margin:0;color:var(--ink-soft);font-size:14.5px}
+
+.fields{display:flex;flex-direction:column;gap:18px}
+.field{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 16px 15px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:9px;
+}
+.field.invalid{border-color:#C2726F}
+label.q{font-weight:600;font-size:15.5px;line-height:1.35;display:block}
+label.q .req{color:var(--accent);margin-left:3px}
+.hint{font-size:13px;color:var(--ink-faint);margin-top:-4px}
+
+input[type=text],input[type=tel],input[type=email],input[type=date],textarea,select{
+  width:100%;font:inherit;color:var(--ink);
+  background:var(--surface-2);
+  border:1px solid transparent;border-radius:10px;
+  padding:11px 12px;outline:none;
+  transition:border-color .15s, background .15s;
+}
+textarea{min-height:96px;resize:vertical;line-height:1.5}
+textarea.tall{min-height:150px}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);background:var(--surface)}
+input::placeholder,textarea::placeholder{color:var(--ink-faint)}
+
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{
+  position:relative;
+}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{
+  display:block;padding:9px 14px;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface-2);
+  font-size:14.5px;cursor:pointer;transition:.15s;
+}
+.opt input:checked + span{
+  background:var(--accent-soft);border-color:var(--accent);color:var(--accent-deep);font-weight:600;
+}
+.opt input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+
+.age-chip{
+  align-self:flex-start;font-size:13px;color:var(--accent-deep);background:var(--accent-soft);
+  border-radius:999px;padding:3px 10px;font-weight:600;
+}
+
+.note{
+  background:var(--surface-2);border-left:3px solid var(--gold);
+  border-radius:0 10px 10px 0;padding:14px 16px;font-size:14.5px;color:var(--ink-soft);
+}
+.note b{color:var(--ink)}
+.note a{color:var(--accent-deep)}
+
+/* ---------- navegação ---------- */
+.navbar{
+  position:fixed;bottom:0;left:0;right:0;z-index:20;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:saturate(140%) blur(10px);
+  border-top:1px solid var(--line);
+}
+.navbar-inner{max-width:640px;margin:0 auto;padding:12px 20px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center}
+.btn{
+  border:0;border-radius:11px;padding:13px 22px;cursor:pointer;font-weight:600;font-size:15.5px;
+  transition:.15s;
+}
+.btn-primary{background:var(--accent);color:var(--on-accent);flex:1}
+.btn-primary:hover{background:var(--accent-deep)}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink-soft)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.saved{font-size:12px;color:var(--ink-faint);text-align:center;padding-bottom:6px}
+
+/* ---------- revisão ---------- */
+.review-group{margin:0 0 22px}
+.review-group h3{
+  font-family:"Lora",Georgia,"Times New Roman",serif;font-size:17px;font-weight:600;margin:0 0 10px;
+  padding-bottom:7px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+}
+.review-group h3 button{
+  background:none;border:0;font-size:12.5px;color:var(--accent);cursor:pointer;font-family:"Karla",sans-serif;font-weight:600;
+}
+.qa{margin:0 0 12px}
+.qa dt{font-size:12.5px;color:var(--ink-faint);letter-spacing:.02em}
+.qa dd{margin:2px 0 0;font-size:15px;white-space:pre-wrap}
+.empty{color:var(--ink-faint);font-style:italic}
+
+.done{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;box-shadow:var(--shadow);text-align:center;
+}
+.done h2{font-family:"Lora",Georgia,"Times New Roman",serif;font-weight:600;font-size:26px;margin:10px 0 8px}
+.done p{color:var(--ink-soft);margin:0 auto 8px;max-width:44ch}
+.mark{width:46px;height:46px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;margin:0 auto}
+.mark svg{width:24px;height:24px;stroke:var(--accent-deep);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.stack{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.status{font-size:13.5px;min-height:20px;color:var(--ink-soft)}
+.status.err{color:#C2726F}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media (max-width:420px){
+  .intro-card h1{font-size:26px}
+  .section-head h2{font-size:22px}
+}
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-name">Dra. Sabrina Gois Santos<span>Pediatria e Homeopatia</span></div>
+      <div class="step-count" id="stepCount"></div>
+    </div>
+    <div class="rail"><div class="rail-fill" id="railFill"></div></div>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<div class="navbar" id="navbar">
+  <div class="saved" id="savedNote"></div>
+  <div class="navbar-inner">
+    <button class="btn btn-ghost" id="btnBack" type="button">Voltar</button>
+    <button class="btn btn-primary" id="btnNext" type="button">Continuar</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============================================================
+   1. CONTEÚDO DA FICHA
+   ============================================================ */
+
+const SECTIONS = [
+  {
+    id:"identificacao",
+    title:"Quem são vocês",
+    sub:"Para eu já chegar na consulta sabendo de vocês.",
+    fields:[
+      {id:"gestante_nome", label:"Nome completo da gestante", type:"text", required:true},
+      {id:"gestante_nascimento", label:"Data de nascimento", type:"date", age:true},
+      {id:"parceiro_nome", label:"Nome do parceiro ou acompanhante", type:"text"},
+      {id:"telefone", label:"WhatsApp para contato", type:"tel", required:true, placeholder:"(11) 90000-0000"},
+      {id:"email", label:"E-mail", type:"email", required:true},
+      {id:"dpp", label:"Data provável do parto", type:"date", required:true},
+      {id:"semanas_hoje", label:"Com quantas semanas de gestação você está hoje?", type:"text", placeholder:"Ex.: 32 semanas"},
+      {id:"consulta_data", label:"Data prevista da nossa consulta", type:"date"},
+      {id:"profissoes", label:"Profissão de vocês dois", type:"text"},
+      {id:"origem", label:"Como chegou até mim?", type:"radio", options:["Indicação","Instagram","Google","Convênio","Outro"]},
+      {id:"origem_indicacao", label:"Quem indicou?", type:"text", showIf:{f:"origem", v:["Indicação"]}},
+      {id:"origem_convenio", label:"Qual convênio?", type:"text", showIf:{f:"origem", v:["Convênio"]}},
+      {id:"origem_outro", label:"Conte de onde você chegou até mim", type:"text", showIf:{f:"origem", v:["Outro"]}}
+    ]
+  },
+  {
+    id:"gestacao",
+    title:"Como está sendo a gestação",
+    sub:"O que já aconteceu até aqui.",
+    fields:[
+      {id:"primeira_gestacao", label:"É a sua primeira gestação?", type:"radio", options:["Sim","Não"]},
+      {id:"gestacoes_anteriores", label:"Conte das gestações anteriores", type:"textarea",
+       hint:"Quantas, como foram os partos, e se houve perdas — só o que você quiser contar.", showIf:{f:"primeira_gestacao", v:["Não"]}},
+      {id:"gemelar", label:"É uma gestação de mais de um bebê?", type:"radio", options:["Não","Sim, gêmeos","Sim, três ou mais"]},
+      {id:"sexo_bebe", label:"Já sabem o sexo do bebê?", type:"radio", options:["Menina","Menino","Ainda não sabemos","Preferimos não saber"]},
+      {id:"nome_bebe", label:"Já escolheram o nome?", type:"text"},
+      {id:"obstetra", label:"Quem faz o seu pré-natal?", type:"text", placeholder:"Nome do obstetra"},
+      {id:"intercorrencias", label:"Houve alguma intercorrência nesta gestação?", type:"radio", options:["Sim","Não"]},
+      {id:"intercorrencias_quais", label:"Quais?", type:"textarea",
+       hint:"Pressão alta, diabetes gestacional, infecção urinária, sangramento, risco de parto prematuro...",
+       showIf:{f:"intercorrencias", v:["Sim"]}},
+      {id:"exames_alterados", label:"Algum exame ou ultrassom veio com alteração?", type:"textarea"},
+      {id:"medicamentos", label:"O que você está usando na gestação?", type:"textarea", required:true,
+       hint:"Vitaminas, suplementos e medicamentos. Se for só o que o obstetra passou, pode escrever assim."}
+    ]
+  },
+  {
+    id:"parto",
+    title:"O parto",
+    sub:"Como vocês estão planejando esse dia.",
+    fields:[
+      {id:"maternidade", label:"Em qual maternidade pretendem ter o bebê?", type:"text"},
+      {id:"convenio_parto", label:"Será pelo convênio ou particular?", type:"radio", options:["Convênio","Particular","Ainda decidindo"]},
+      {id:"tipo_parto", label:"Qual tipo de parto vocês desejam?", type:"radio", options:["Parto normal","Cesárea","Ainda decidindo"]},
+      {id:"pediatra_sala", label:"Já têm pediatra para acompanhar a sala de parto?", type:"radio", options:["Sim","Não","Não sabia que precisava"]},
+      {id:"plano_parto", label:"Vocês têm um plano de parto ou preferências importantes?", type:"textarea",
+       hint:"Contato pele a pele, clampeamento tardio do cordão, acompanhante, banho tardio, golden hour."},
+      {id:"medos_parto", label:"Tem algum medo ou preocupação sobre o parto?", type:"textarea"}
+    ]
+  },
+  {
+    id:"amamentacao",
+    title:"Amamentação",
+    sub:"Quanto antes conversarmos sobre isso, melhor.",
+    fields:[
+      {id:"pretende_amamentar", label:"Pretende amamentar?", type:"radio", options:["Sim","Não","Ainda não sei"]},
+      {id:"ja_amamentou", label:"Já amamentou antes?", type:"radio", options:["Sim","Não"]},
+      {id:"como_foi", label:"Como foi essa experiência?", type:"textarea", showIf:{f:"ja_amamentou", v:["Sim"]}},
+      {id:"mama_historico", label:"Tem alguma questão nas mamas que eu deva saber?", type:"textarea",
+       hint:"Cirurgia de redução, prótese, mamilo plano ou invertido, dor, alteração de sensibilidade."},
+      {id:"preparo", label:"Já fez algum curso ou orientação sobre amamentação?", type:"radio", options:["Sim","Não","Pretendo fazer"]},
+      {id:"duvidas_amamentacao", label:"Quais são suas dúvidas sobre amamentação?", type:"textarea", tall:true}
+    ]
+  },
+  {
+    id:"familia",
+    title:"A saúde da família",
+    sub:"O que corre na família ajuda a prever o que observar no bebê.",
+    fields:[
+      {id:"saude_mae", label:"Você tem algum problema de saúde?", type:"textarea",
+       hint:"Alergia, asma, rinite, tireoide, diabetes, pressão alta, enxaqueca, qualquer coisa em acompanhamento."},
+      {id:"saude_pai", label:"E o pai do bebê?", type:"textarea"},
+      {id:"alergias_familia", label:"Há alergias na família?", type:"textarea",
+       hint:"Alergia alimentar, rinite, asma, dermatite atópica — inclusive em avós, tios e irmãos."},
+      {id:"doencas_familia", label:"Alguma doença genética ou hereditária conhecida?", type:"textarea"},
+      {id:"outros_filhos", label:"Vocês já têm outros filhos?", type:"radio", options:["Sim","Não"]},
+      {id:"outros_filhos_quais", label:"Idades e como é a saúde deles", type:"textarea", showIf:{f:"outros_filhos", v:["Sim"]}}
+    ]
+  },
+  {
+    id:"casa",
+    title:"A casa e a rede de apoio",
+    sub:"Os primeiros dias em casa são o que mais pega.",
+    fields:[
+      {id:"quem_mora", label:"Quem mora na casa?", type:"text"},
+      {id:"apoio", label:"Quem vai ajudar vocês nos primeiros dias?", type:"textarea",
+       hint:"Avós, doula, babá, ninguém por perto — vale dizer como está de verdade."},
+      {id:"licenca", label:"Como ficam as licenças e a volta ao trabalho?", type:"text"},
+      {id:"onde_dorme", label:"Onde o bebê vai dormir?", type:"radio",
+       options:["Berço no quarto de vocês","Quarto próprio","Cama compartilhada","Ainda decidindo"]},
+      {id:"fumantes", label:"Alguém fuma dentro de casa?", type:"radio", options:["Não","Sim"]},
+      {id:"animais", label:"Têm animais em casa?", type:"text", placeholder:"Quais e há quanto tempo"},
+      {id:"creche_futura", label:"Há previsão de creche ou babá no primeiro ano?", type:"text"}
+    ]
+  },
+  {
+    id:"vacinas",
+    title:"Vacinas",
+    sub:"As da gestação protegem o bebê nos primeiros meses de vida.",
+    fields:[
+      {id:"vacinas_gestacao", label:"Quais vacinas você já tomou nesta gestação?", type:"textarea",
+       hint:"dTpa (coqueluche), influenza, covid, hepatite B, VSR. Se não lembrar, tudo bem."},
+      {id:"vacinas_duvidas", label:"Tem dúvidas sobre as vacinas do bebê?", type:"textarea"},
+      {id:"clinica_vacina", label:"Já pensaram onde o bebê vai se vacinar?", type:"radio",
+       options:["Posto de saúde","Clínica particular","Ainda não pensamos"]}
+    ]
+  },
+  {
+    id:"conversa",
+    title:"O que vocês querem conversar",
+    sub:"Essa consulta é de vocês. Me diga o que importa.",
+    fields:[
+      {id:"expectativas", label:"O que vocês mais esperam desta consulta?", type:"textarea", required:true, tall:true},
+      {id:"preocupacoes", label:"Existe alguma preocupação específica rondando vocês?", type:"textarea"},
+      {id:"observacoes", label:"Mais alguma coisa que eu precise saber?", type:"textarea"}
+    ]
+  }
+];
+
+const KICKERS = {
+  identificacao:"Identificação",
+  gestacao:"Gestação atual",
+  parto:"Plano de parto",
+  amamentacao:"Amamentação",
+  familia:"História familiar",
+  casa:"Ambiente e rede de apoio",
+  vacinas:"Imunizações",
+  conversa:"Expectativas"
+};
+
+const LEMBRETES = 'Se puder, envie antes para <b>exames@drasabrina.com.br</b> os laudos dos ultrassons e os exames do pré-natal, com o seu nome completo no assunto. E traga o cartão da gestante na consulta.';
+
+
+/* ============================================================
+   2. ESTADO
+   ============================================================ */
+
+const STORE_KEY = "ficha-preconsulta-gestante-v1";
+const data = load();
+let step = 0;                                  // 0 = capa
+const LAST = SECTIONS.length + 1;              // revisão
+const DONE = SECTIONS.length + 2;              // conclusão
+
+function load(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  }catch(e){ return {}; }
+}
+function save(){
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(data)); note("Rascunho salvo neste aparelho"); }
+  catch(e){ /* modo privado: segue sem salvar */ }
+}
+let noteTimer=null;
+function note(msg){
+  const el = document.getElementById("savedNote");
+  el.textContent = msg;
+  clearTimeout(noteTimer);
+  noteTimer = setTimeout(()=>{ el.textContent=""; }, 2200);
+}
+
+/* ============================================================
+   3. UTILIDADES
+   ============================================================ */
+
+function idadeDe(iso){
+  if(!iso) return "";
+  const n = new Date(iso+"T00:00:00");
+  if(isNaN(n)) return "";
+  const h = new Date();
+  let anos = h.getFullYear()-n.getFullYear();
+  let meses = h.getMonth()-n.getMonth();
+  let dias = h.getDate()-n.getDate();
+  if(dias<0){ meses--; }
+  if(meses<0){ anos--; meses+=12; }
+  if(anos<0) return "";
+  if(anos===0 && meses===0){
+    const dias = Math.max(0, Math.round((h - n) / 86400000));
+    if(dias === 0) return "nasceu hoje";
+    return dias + (dias === 1 ? " dia de vida" : " dias de vida");
+  }
+  if(anos===0) return meses+(meses===1?" mês":" meses");
+  if(meses===0) return anos+(anos===1?" ano":" anos");
+  return anos+(anos===1?" ano":" anos")+" e "+meses+(meses===1?" mês":" meses");
+}
+function dataBr(iso){
+  if(!iso) return "";
+  const p = iso.split("-");
+  return p.length===3 ? p[2]+"/"+p[1]+"/"+p[0] : iso;
+}
+function hojeBr(){
+  const d=new Date();
+  const p=n=>String(n).padStart(2,"0");
+  return p(d.getDate())+"/"+p(d.getMonth()+1)+"/"+d.getFullYear();
+}
+function visible(f){
+  if(!f.showIf) return true;
+  return f.showIf.v.indexOf(data[f.showIf.f]) !== -1;
+}
+function esc(s){
+  return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+}
+
+/* ============================================================
+   4. RENDER
+   ============================================================ */
+
+const app = document.getElementById("app");
+const btnBack = document.getElementById("btnBack");
+const btnNext = document.getElementById("btnNext");
+const railFill = document.getElementById("railFill");
+const stepCount = document.getElementById("stepCount");
+
+function render(){
+  window.scrollTo(0,0);
+  railFill.style.width = Math.round((step / DONE) * 100) + "%";
+  document.getElementById("navbar").style.display = (step === DONE) ? "none" : "";
+
+  if(step === 0){ renderCapa(); }
+  else if(step <= SECTIONS.length){ renderSecao(SECTIONS[step-1]); }
+  else if(step === LAST){ renderRevisao(); }
+  else { renderFim(); }
+}
+
+function renderCapa(){
+  stepCount.textContent = "";
+  app.innerHTML =
+    '<div class="intro-card">' +
+      '<div class="eyebrow">Antes de o bebê chegar</div>' +
+      '<h1>Uma conversa que começa <em>antes</em> do parto.</h1>' +
+      '<p>Preencha com calma, de preferência até 24 horas antes da consulta. São 8 blocos curtos e leva cerca de 10 minutos.</p>' +
+      '<ul class="intro-list">' +
+        '<li><span class="dot"></span><span>Só o que tem <b>*</b> é obrigatório. O resto, responda o que souber.</span></li>' +
+        '<li><span class="dot"></span><span>Suas respostas ficam <b>salvas neste aparelho</b> — pode fechar e voltar depois.</span></li>' +
+        '<li><span class="dot"></span><span>No fim, você toca em enviar e a ficha <b>chega direto para mim</b>.</span></li>' +
+      '</ul>' +
+    '</div>';
+  btnBack.style.display = "none";
+  btnNext.textContent = "Começar";
+}
+
+function renderSecao(sec){
+  stepCount.textContent = "Bloco " + (step) + " de " + SECTIONS.length;
+  let html =
+    '<div class="section-head">' +
+      '<div class="kicker">' + esc(KICKERS[sec.id] || "") + '</div>' +
+      '<h2>' + esc(sec.title) + '</h2>' +
+      (sec.sub ? '<p>' + esc(sec.sub) + '</p>' : '') +
+    '</div><div class="fields">';
+
+  sec.fields.forEach(f=>{
+    if(!visible(f)) return;
+    html += '<div class="field" data-field="'+f.id+'">';
+    html += '<label class="q" for="i_'+f.id+'">'+esc(f.label)+(f.required?'<span class="req">*</span>':'')+'</label>';
+    if(f.hint) html += '<div class="hint">'+f.hint+'</div>';
+    const v = data[f.id] || "";
+    if(f.type === "textarea"){
+      html += '<textarea id="i_'+f.id+'" class="'+(f.tall?"tall":"")+'" placeholder="'+esc(f.placeholder||"")+'">'+esc(v)+'</textarea>';
+    } else if(f.type === "radio"){
+      html += '<div class="opts">';
+      f.options.forEach((o,i)=>{
+        html += '<label class="opt"><input type="radio" name="i_'+f.id+'" value="'+esc(o)+'"'+(v===o?" checked":"")+
+                (i===0?' id="i_'+f.id+'"':'')+'><span>'+esc(o)+'</span></label>';
+      });
+      html += '</div>';
+    } else {
+      html += '<input id="i_'+f.id+'" type="'+f.type+'" value="'+esc(v)+'" placeholder="'+esc(f.placeholder||"")+'">';
+    }
+    if(f.age) html += '<div class="age-chip" data-age="'+f.id+'" style="display:'+(idadeDe(v)?"block":"none")+'">'+esc(idadeDe(v))+'</div>';
+    html += '</div>';
+  });
+
+  html += '</div>';
+  if(sec.id === "conversa"){
+    html += '<div class="note" style="margin-top:18px">'+LEMBRETES+'</div>';
+  }
+  app.innerHTML = html;
+  bind(sec);
+  btnBack.style.display = "";
+  btnNext.textContent = step === SECTIONS.length ? "Revisar respostas" : "Continuar";
+}
+
+function bind(sec){
+  sec.fields.forEach(f=>{
+    if(!visible(f)) return;
+    if(f.type === "radio"){
+      app.querySelectorAll('input[name="i_'+f.id+'"]').forEach(inp=>{
+        inp.addEventListener("change", ()=>{
+          data[f.id] = inp.value; save();
+          if(sec.fields.some(x=>x.showIf && x.showIf.f===f.id)) renderSecao(sec);
+        });
+      });
+    } else {
+      const el = document.getElementById("i_"+f.id);
+      if(!el) return;
+      el.addEventListener("input", ()=>{
+        data[f.id] = el.value;
+        const chip = app.querySelector('[data-age="'+f.id+'"]');
+        if(chip){
+          const t = idadeDe(el.value);
+          chip.textContent = t; chip.style.display = t ? "block" : "none";
+        }
+        el.closest(".field").classList.remove("invalid");
+        save();
+      });
+    }
+  });
+}
+
+function validar(sec){
+  let ok = true, first = null;
+  sec.fields.forEach(f=>{
+    if(!f.required || !visible(f)) return;
+    const val = (data[f.id]||"").trim();
+    const box = app.querySelector('[data-field="'+f.id+'"]');
+    if(!val){
+      ok = false;
+      if(box){ box.classList.add("invalid"); if(!first) first = box; }
+    }
+  });
+  if(first) first.scrollIntoView({behavior:"smooth", block:"center"});
+  if(!ok) note("Faltou responder o que está marcado com *");
+  return ok;
+}
+
+function renderRevisao(){
+  stepCount.textContent = "Revisão";
+  let html =
+    '<div class="section-head">' +
+      '<div class="kicker">Última etapa</div>' +
+      '<h2>Confira antes de enviar</h2>' +
+      '<p>Toque em “editar” em qualquer bloco para corrigir algo.</p>' +
+    '</div>';
+
+  SECTIONS.forEach((sec,i)=>{
+    const respondidos = sec.fields.filter(f=>visible(f) && (data[f.id]||"").trim());
+    html += '<div class="review-group"><h3>'+esc(sec.title)+
+            '<button type="button" data-goto="'+(i+1)+'">editar</button></h3>';
+    if(!respondidos.length){
+      html += '<p class="empty">Nada preenchido neste bloco.</p>';
+    } else {
+      html += '<dl>';
+      respondidos.forEach(f=>{
+        let v = data[f.id];
+        if(f.age && idadeDe(v)) v = dataBr(v) + " — " + idadeDe(v);
+        else if(f.type === "date") v = dataBr(v);
+        html += '<div class="qa"><dt>'+esc(f.label)+'</dt><dd>'+esc(v)+'</dd></div>';
+      });
+      html += '</dl>';
+    }
+    html += '</div>';
+  });
+
+  html += '<div class="note">'+LEMBRETES+'</div>';
+  html += '<div class="status" id="status" style="text-align:center;margin-top:14px"></div>';
+  app.innerHTML = html;
+  app.querySelectorAll("[data-goto]").forEach(b=>{
+    b.addEventListener("click", ()=>{ step = parseInt(b.dataset.goto,10); render(); });
+  });
+  btnBack.style.display = "";
+  btnNext.disabled = false;
+  btnNext.textContent = ROTULO_ENVIAR;
+}
+
+const ROTULO_ENVIAR = "Enviar PDF para a Dra. Sabrina";
+let enviada = false;
+
+function renderFim(){
+  stepCount.textContent = "Enviada";
+
+  app.innerHTML =
+    '<div class="done">' +
+      '<div class="mark"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></svg></div>' +
+      '<h2>Ficha enviada</h2>' +
+      '<p>Recebemos suas respostas. Obrigada por preencher com cuidado — isso rende muito na consulta.</p>' +
+      '<div class="stack">' +
+        '<button class="btn btn-ghost" id="btnPdf" type="button">Guardar uma cópia em PDF</button>' +
+        '<button class="btn btn-ghost" id="btnCopy" type="button">Copiar a ficha em texto</button>' +
+      '</div>' +
+      '<div class="status" id="status"></div>' +
+      '<div class="note" style="margin-top:20px;text-align:left">'+LEMBRETES+'</div>' +
+    '</div>';
+
+  document.getElementById("btnPdf").addEventListener("click", baixarPdf);
+  document.getElementById("btnCopy").addEventListener("click", copiarTexto);
+}
+
+/* ---- envio para a clínica ---- */
+
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbz4yTCAKp45uCRoCzHnESBlxfP6CeZJ5_5_U1sY8F69XwoUKPmbVMUnl8t-Lbnfx1Il/exec";
+
+function montarEnvio(){
+  const blocos = [];
+  SECTIONS.forEach(sec=>{
+    const respondidos = sec.fields.filter(f=>visible(f) && (data[f.id]||"").trim());
+    if(!respondidos.length) return;
+    blocos.push({
+      titulo: KICKERS[sec.id] || sec.title,
+      itens: respondidos.map(f=>{
+        let v = data[f.id];
+        if(f.age && idadeDe(v)) v = dataBr(v) + " (" + idadeDe(v) + ")";
+        else if(f.type === "date") v = dataBr(v);
+        return {p:f.label, r:v};
+      })
+    });
+  });
+  return {
+    tipo:"Gestante",
+    paciente:{
+      nome: data.gestante_nome || "",
+      idade: data.semanas_hoje || "",
+      nascimento: "",
+      consulta: dataBr(data.consulta_data||""),
+      responsavel: data.gestante_nome || "",
+      parentesco: "gestante",
+      telefone: data.telefone || "",
+      email: data.email || ""
+    },
+    blocos: blocos
+  };
+}
+
+async function enviarFicha(){
+  const st = document.getElementById("status");
+  const btn = btnNext;
+  st.className = "status";
+
+  if(!ENDPOINT){
+    st.className = "status err";
+    st.textContent = "O envio ainda não foi configurado nesta versão de teste.";
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Enviando…";
+  st.textContent = "Enviando a ficha…";
+
+  const corpo = JSON.stringify(montarEnvio());
+  try{
+    const r = await fetch(ENDPOINT, {
+      method:"POST",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body: corpo
+    });
+    const resposta = await r.json();
+    if(!resposta.ok) throw new Error(resposta.erro || "falha no servidor");
+    concluirEnvio();
+  }catch(err){
+    try{
+      await fetch(ENDPOINT, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: corpo});
+      concluirEnvio();
+    }catch(e2){
+      btn.disabled = false;
+      btn.textContent = ROTULO_ENVIAR;
+      st.className = "status err";
+      st.textContent = "Não consegui enviar agora. Verifique a internet e tente de novo.";
+    }
+  }
+}
+
+function concluirEnvio(){
+  enviada = true;
+  btnNext.disabled = false;
+  btnNext.textContent = ROTULO_ENVIAR;
+  try{ localStorage.removeItem(STORE_KEY); }catch(e){}
+  step = DONE;
+  render();
+}
+
+btnBack.addEventListener("click", ()=>{
+  if(step === 0) return;
+  step--;
+  render();
+});
+btnNext.addEventListener("click", ()=>{
+  if(step >= 1 && step <= SECTIONS.length){
+    if(!validar(SECTIONS[step-1])) return;
+  }
+  if(step === LAST){ enviarFicha(); return; }
+  step++;
+  render();
+});
+
+/* ============================================================
+   5. SAÍDA — texto e PDF
+   ============================================================ */
+
+function linhasDaFicha(){
+  const out = [];
+  SECTIONS.forEach(sec=>{
+    const respondidos = sec.fields.filter(f=>visible(f) && (data[f.id]||"").trim());
+    if(!respondidos.length) return;
+    out.push({t:"sec", v:(KICKERS[sec.id] || sec.title)});
+    respondidos.forEach(f=>{
+      let v = data[f.id];
+      if(f.age && idadeDe(v)) v = dataBr(v) + " (" + idadeDe(v) + ")";
+      else if(f.type === "date") v = dataBr(v);
+      out.push({t:"q", v:f.label});
+      out.push({t:"a", v:v});
+    });
+  });
+  return out;
+}
+
+function nomeArquivo(){
+  const n = (data.gestante_nome||"paciente").normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+            .replace(/[^A-Za-z0-9 ]/g,"").trim().replace(/\s+/g,"-").toLowerCase();
+  const d = new Date();
+  const p = x=>String(x).padStart(2,"0");
+  return "ficha-preconsulta-"+n+"-"+d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+".pdf";
+}
+
+function fichaEmTexto(){
+  let s = "FICHA DE PRÉ-CONSULTA — Dra. Sabrina Gois Santos\n";
+  s += (data.gestante_nome||"") + ((data.semanas_hoje||"") ? " · " + (data.semanas_hoje||"") : "") + "\n";
+  s += "Preenchida em " + hojeBr() + "\n";
+  linhasDaFicha().forEach(l=>{
+    if(l.t==="sec") s += "\n\n== " + l.v.toUpperCase() + " ==\n";
+    if(l.t==="q") s += "\n" + l.v + "\n";
+    if(l.t==="a") s += l.v + "\n";
+  });
+  return s;
+}
+
+function copiarTexto(){
+  const st = document.getElementById("status");
+  const txt = fichaEmTexto();
+  const done = ()=>{ st.className="status"; st.textContent = "Ficha copiada. Cole no WhatsApp ou no e-mail da clínica."; };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done, fallback);
+  } else fallback();
+  function fallback(){
+    const ta = document.createElement("textarea");
+    ta.value = txt; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); done(); }
+    catch(e){ st.className="status err"; st.textContent="Não consegui copiar automaticamente neste navegador."; }
+    document.body.removeChild(ta);
+  }
+}
+
+/* ---- gerador de PDF (sem bibliotecas externas) ---- */
+
+const W_REG = {32:278,33:278,34:355,35:556,36:556,37:889,38:667,39:191,40:333,41:333,42:389,43:584,44:278,45:333,46:278,47:278,58:278,59:278,60:584,61:584,62:584,63:556,64:1015,91:278,92:278,93:278,94:469,95:556,96:333,123:334,124:260,125:334,126:584,
+ 65:667,66:667,67:722,68:722,69:667,70:611,71:778,72:722,73:278,74:500,75:667,76:556,77:833,78:722,79:778,80:667,81:778,82:722,83:667,84:611,85:722,86:667,87:944,88:667,89:667,90:611,
+ 97:556,98:556,99:500,100:556,101:556,102:278,103:556,104:556,105:222,106:222,107:500,108:222,109:833,110:556,111:556,112:556,113:556,114:333,115:500,116:278,117:556,118:500,119:722,120:500,121:500,122:500};
+const W_BOLD = {32:278,33:333,34:474,35:556,36:556,37:889,38:722,39:238,40:333,41:333,42:389,43:584,44:278,45:333,46:278,47:278,58:333,59:333,60:584,61:584,62:584,63:611,64:975,91:333,92:278,93:333,94:584,95:556,96:333,123:389,124:280,125:389,126:584,
+ 65:722,66:722,67:722,68:722,69:667,70:611,71:778,72:722,73:278,74:556,75:722,76:611,77:833,78:722,79:778,80:667,81:778,82:722,83:667,84:611,85:722,86:667,87:944,88:667,89:667,90:611,
+ 97:556,98:611,99:556,100:611,101:556,102:333,103:611,104:611,105:278,106:278,107:556,108:278,109:889,110:611,111:611,112:611,113:611,114:389,115:556,116:333,117:611,118:556,119:778,120:556,121:556,122:500};
+
+for(let c=48;c<=57;c++){ W_REG[c]=556; W_BOLD[c]=556; }
+
+function larguraTexto(str, size, bold){
+  const tab = bold ? W_BOLD : W_REG;
+  let w = 0;
+  for(let i=0;i<str.length;i++){
+    const c = str.charCodeAt(i);
+    w += (tab[c] !== undefined ? tab[c] : 556);
+  }
+  return w * size / 1000;
+}
+
+function paraLatin1(s){
+  return String(s)
+    .replace(/[‘’‛]/g,"'")
+    .replace(/[“”]/g,'"')
+    .replace(/[–—]/g,"-")
+    .replace(/…/g,"...")
+    .replace(/[^\x00-\xFF]/g,"?");
+}
+function pdfEsc(s){
+  return paraLatin1(s).replace(/\\/g,"\\\\").replace(/\(/g,"\\(").replace(/\)/g,"\\)");
+}
+function quebrar(str, size, bold, maxW){
+  const linhas = [];
+  String(str).split(/\r?\n/).forEach(par=>{
+    if(par.trim()===""){ linhas.push(""); return; }
+    const palavras = par.split(/\s+/);
+    let atual = "";
+    palavras.forEach(p=>{
+      const teste = atual ? atual+" "+p : p;
+      if(larguraTexto(paraLatin1(teste), size, bold) <= maxW){ atual = teste; }
+      else{
+        if(atual) linhas.push(atual);
+        if(larguraTexto(paraLatin1(p), size, bold) > maxW){
+          let pedaco = "";
+          for(const ch of p){
+            if(larguraTexto(paraLatin1(pedaco+ch), size, bold) > maxW){ linhas.push(pedaco); pedaco = ch; }
+            else pedaco += ch;
+          }
+          atual = pedaco;
+        } else atual = p;
+      }
+    });
+    if(atual) linhas.push(atual);
+  });
+  return linhas;
+}
+
+function gerarPdf(){
+  const PW = 595.28, PH = 841.89;
+  const ML = 56, MR = 56, MT = 60, MB = 58;
+  const CW = PW - ML - MR;
+
+  const paginas = [];
+  let buf = [], y = 0;
+
+  function novaPagina(){
+    if(buf.length) paginas.push(buf);
+    buf = []; y = PH - MT;
+  }
+  function rgb(r,g,b){ buf.push(r.toFixed(3)+" "+g.toFixed(3)+" "+b.toFixed(3)+" rg"); }
+  function texto(str, size, bold, cor){
+    buf.push("BT /"+(bold?"F2":"F1")+" "+size+" Tf 1 0 0 1 "+ML.toFixed(2)+" "+y.toFixed(2)+" Tm ("+pdfEsc(str)+") Tj ET");
+  }
+  function bloco(str, size, bold, leading, cor){
+    const linhas = quebrar(str, size, bold, CW);
+    linhas.forEach(l=>{
+      if(y < MB + leading){ novaPagina(); }
+      if(cor) rgb(cor[0],cor[1],cor[2]);
+      if(l !== "") texto(l, size, bold);
+      y -= leading;
+    });
+  }
+  function regua(){
+    if(y < MB + 12) novaPagina();
+    buf.push("0.906 0.851 0.831 RG 0.8 w "+ML.toFixed(2)+" "+y.toFixed(2)+" m "+(PW-MR).toFixed(2)+" "+y.toFixed(2)+" l S");
+    y -= 12;
+  }
+  function espaco(n){ y -= n; }
+
+  novaPagina();
+
+  // cabeçalho
+  rgb(0.62,0.44,0.45);
+  bloco("DRA. SABRINA GOIS SANTOS  ·  PEDIATRIA E HOMEOPATIA", 8.5, true, 13);
+  espaco(11);
+  rgb(0.23,0.18,0.15);
+  bloco("Ficha de pré-consulta", 20, true, 24);
+  espaco(2);
+  rgb(0.23,0.18,0.15);
+  const nome = (data.gestante_nome||"—");
+  const idade = (data.semanas_hoje||"");
+  bloco(nome + (idade ? "   ·   " + idade : ""), 12.5, true, 17);
+  rgb(0.48,0.41,0.38);
+  const linha2 = [];
+  if(data.gestante_nascimento) linha2.push("Nascimento: " + dataBr(data.gestante_nascimento));
+  if(data.consulta_data) linha2.push("Consulta: " + dataBr(data.consulta_data));
+  linha2.push("Preenchida em " + hojeBr());
+  bloco(linha2.join("   ·   "), 9, false, 13);
+  if(data.gestante_nome){
+    bloco("Informado por " + data.gestante_nome +
+          (" (gestante)") +
+          (data.telefone ? "  ·  " + data.telefone : ""), 9, false, 13);
+  }
+  espaco(6);
+  regua();
+  espaco(4);
+
+  // corpo
+  linhasDaFicha().forEach(item=>{
+    if(item.t === "sec"){
+      if(y < MB + 115) novaPagina();
+      espaco(8);
+      rgb(0.62,0.44,0.45);
+      bloco(item.v.toUpperCase(), 9, true, 14);
+      espaco(1);
+      regua();
+    } else if(item.t === "q"){
+      if(y < MB + 46) novaPagina();
+      espaco(4);
+      rgb(0.55,0.48,0.44);
+      bloco(item.v, 8.5, false, 12);
+    } else {
+      rgb(0.16,0.13,0.11);
+      bloco(item.v, 11, false, 15.5);
+      espaco(3);
+    }
+  });
+
+  novaPagina();
+
+  // rodapé em todas as páginas
+  const total = paginas.length;
+  paginas.forEach((p,i)=>{
+    p.push("0.63 0.57 0.54 rg BT /F1 8 Tf 1 0 0 1 "+ML.toFixed(2)+" "+(MB-22).toFixed(2)+" Tm (" +
+           pdfEsc("Ficha de pré-consulta · " + (data.gestante_nome||"") + " · página " + (i+1) + " de " + total) + ") Tj ET");
+  });
+
+  // montagem do arquivo
+  const objetos = [];
+  const nPag = paginas.length;
+  const idPages = 1, idFont1 = 2, idFont2 = 3;
+  const idPage = i => 4 + i*2;
+  const idCont = i => 5 + i*2;
+  const idCatalog = 4 + nPag*2;
+
+  let kids = [];
+  for(let i=0;i<nPag;i++) kids.push(idPage(i)+" 0 R");
+
+  objetos[idPages] = "<< /Type /Pages /Count "+nPag+" /Kids ["+kids.join(" ")+"] >>";
+  objetos[idFont1] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>";
+  objetos[idFont2] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>";
+  for(let i=0;i<nPag;i++){
+    objetos[idPage(i)] = "<< /Type /Page /Parent "+idPages+" 0 R /MediaBox [0 0 "+PW.toFixed(2)+" "+PH.toFixed(2)+"] " +
+      "/Resources << /Font << /F1 "+idFont1+" 0 R /F2 "+idFont2+" 0 R >> >> /Contents "+idCont(i)+" 0 R >>";
+    const stream = paginas[i].join("\n");
+    objetos[idCont(i)] = "<< /Length "+stream.length+" >>\nstream\n"+stream+"\nendstream";
+  }
+  objetos[idCatalog] = "<< /Type /Catalog /Pages "+idPages+" 0 R >>";
+
+  let pdf = "%PDF-1.4\n";
+  const offsets = [];
+  for(let i=1;i<objetos.length;i++){
+    offsets[i] = pdf.length;
+    pdf += i+" 0 obj\n"+objetos[i]+"\nendobj\n";
+  }
+  const xref = pdf.length;
+  pdf += "xref\n0 "+objetos.length+"\n0000000000 65535 f \n";
+  for(let i=1;i<objetos.length;i++){
+    pdf += String(offsets[i]).padStart(10,"0")+" 00000 n \n";
+  }
+  pdf += "trailer\n<< /Size "+objetos.length+" /Root "+idCatalog+" 0 R >>\nstartxref\n"+xref+"\n%%EOF";
+
+  const bytes = new Uint8Array(pdf.length);
+  for(let i=0;i<pdf.length;i++) bytes[i] = pdf.charCodeAt(i) & 0xFF;
+  return bytes;
+}
+
+async function baixarPdf(){
+  const st = document.getElementById("status");
+  st.className = "status";
+  st.textContent = "Montando o PDF…";
+  let bytes;
+  try{ bytes = gerarPdf(); }
+  catch(e){
+    st.className = "status err";
+    st.textContent = "Não consegui montar o PDF aqui. Use “Copiar a ficha em texto”.";
+    return;
+  }
+
+  let dl = null;
+  try{ dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null; }
+  catch(e){ dl = null; }
+
+  if(dl){
+    try{
+      await dl.save({filename: nomeArquivo(), data: bytes.buffer});
+      st.textContent = "PDF salvo. Agora é só enviar para a clínica.";
+      return;
+    }catch(err){
+      const code = err && err.code;
+      if(code === "declined"){ st.textContent = "Download cancelado. Pode tentar de novo quando quiser."; return; }
+      /* qualquer outro caso: tenta o caminho do navegador */
+    }
+  }
+
+  try{
+    const blob = new Blob([bytes], {type:"application/pdf"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = nomeArquivo();
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url), 4000);
+    st.textContent = "PDF gerado. Se o download não aparecer, use “Copiar a ficha em texto”.";
+  }catch(e){
+    st.className = "status err";
+    st.textContent = "Este navegador bloqueou o download. Use “Copiar a ficha em texto”.";
+  }
+}
+
+render();
+})();
+</script>
+
+</body>
+</html>
