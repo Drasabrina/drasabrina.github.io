@@ -314,7 +314,7 @@ const SECTIONS = [
     fields:[
       {id:"maternidade", label:"Em qual maternidade pretendem ter o bebê?", type:"text"},
       {id:"convenio_parto", label:"Será pelo convênio ou particular?", type:"radio", options:["Convênio","Particular","Ainda decidindo"]},
-      {id:"tipo_parto", label:"Qual tipo de parto vocês desejam?", type:"radio", options:["Parto normal","Cesárea","Ainda decidindo"]},
+      {id:"tipo_parto", label:"Qual tipo de parto vocês desejam?", type:"radio", options:["Parto vaginal","Parto cesárea","Ainda decidindo"]},
       {id:"pediatra_sala", label:"Já têm pediatra para acompanhar a sala de parto?", type:"radio", options:["Sim","Não","Não sabia que precisava"]},
       {id:"plano_parto", label:"Vocês têm um plano de parto ou preferências importantes?", type:"textarea",
        hint:"Contato pele a pele, clampeamento tardio do cordão, acompanhante, banho tardio, golden hour."}
@@ -350,13 +350,9 @@ const SECTIONS = [
   },
   {
     id:"casa",
-    title:"A casa e a rede de apoio",
-    sub:"Os primeiros dias em casa são o que mais pega.",
+    title:"A casa",
+    sub:"O ambiente onde o bebê vai chegar.",
     fields:[
-      {id:"quem_mora", label:"Quem mora na casa?", type:"text"},
-      {id:"apoio", label:"Quem vai ajudar vocês nos primeiros dias?", type:"textarea",
-       hint:"Avós, doula, babá, ninguém por perto — vale dizer como está de verdade."},
-      {id:"licenca", label:"Como ficam as licenças e a volta ao trabalho?", type:"text"},
       {id:"onde_dorme", label:"Onde o bebê vai dormir?", type:"radio",
        options:["Berço no quarto de vocês","Quarto próprio","Cama compartilhada","Ainda decidindo"]},
       {id:"fumantes", label:"Alguém fuma dentro de casa?", type:"radio", options:["Não","Sim"]},
@@ -390,7 +386,7 @@ const KICKERS = {
   parto:"Plano de parto",
   amamentacao:"Amamentação",
   familia:"História familiar",
-  casa:"Ambiente e rede de apoio",
+  casa:"Ambiente",
   vacinas:"Imunizações",
   conversa:"Expectativas"
 };
