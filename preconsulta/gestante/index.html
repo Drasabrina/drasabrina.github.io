@@ -271,7 +271,8 @@ const SECTIONS = [
     sub:"Para eu já chegar na consulta sabendo de vocês.",
     fields:[
       {id:"gestante_nome", label:"Nome completo da gestante", type:"text", required:true},
-      {id:"gestante_nascimento", label:"Data de nascimento", type:"date", age:true},
+      {id:"gestante_nascimento", label:"Data de nascimento da gestante", type:"date", age:true,
+       hint:"A sua data de nascimento — não a do bebê."},
       {id:"parceiro_nome", label:"Nome do parceiro ou acompanhante", type:"text"},
       {id:"telefone", label:"WhatsApp para contato", type:"tel", required:true, placeholder:"(11) 90000-0000"},
       {id:"email", label:"E-mail", type:"email", required:true},
@@ -316,8 +317,7 @@ const SECTIONS = [
       {id:"tipo_parto", label:"Qual tipo de parto vocês desejam?", type:"radio", options:["Parto normal","Cesárea","Ainda decidindo"]},
       {id:"pediatra_sala", label:"Já têm pediatra para acompanhar a sala de parto?", type:"radio", options:["Sim","Não","Não sabia que precisava"]},
       {id:"plano_parto", label:"Vocês têm um plano de parto ou preferências importantes?", type:"textarea",
-       hint:"Contato pele a pele, clampeamento tardio do cordão, acompanhante, banho tardio, golden hour."},
-      {id:"medos_parto", label:"Tem algum medo ou preocupação sobre o parto?", type:"textarea"}
+       hint:"Contato pele a pele, clampeamento tardio do cordão, acompanhante, banho tardio, golden hour."}
     ]
   },
   {
@@ -330,7 +330,6 @@ const SECTIONS = [
       {id:"como_foi", label:"Como foi essa experiência?", type:"textarea", showIf:{f:"ja_amamentou", v:["Sim"]}},
       {id:"mama_historico", label:"Tem alguma questão nas mamas que eu deva saber?", type:"textarea",
        hint:"Cirurgia de redução, prótese, mamilo plano ou invertido, dor, alteração de sensibilidade."},
-      {id:"preparo", label:"Já fez algum curso ou orientação sobre amamentação?", type:"radio", options:["Sim","Não","Pretendo fazer"]},
       {id:"duvidas_amamentacao", label:"Quais são suas dúvidas sobre amamentação?", type:"textarea", tall:true}
     ]
   },
@@ -361,8 +360,7 @@ const SECTIONS = [
       {id:"onde_dorme", label:"Onde o bebê vai dormir?", type:"radio",
        options:["Berço no quarto de vocês","Quarto próprio","Cama compartilhada","Ainda decidindo"]},
       {id:"fumantes", label:"Alguém fuma dentro de casa?", type:"radio", options:["Não","Sim"]},
-      {id:"animais", label:"Têm animais em casa?", type:"text", placeholder:"Quais e há quanto tempo"},
-      {id:"creche_futura", label:"Há previsão de creche ou babá no primeiro ano?", type:"text"}
+      {id:"animais", label:"Têm animais em casa?", type:"text", placeholder:"Quais e há quanto tempo"}
     ]
   },
   {
@@ -372,9 +370,7 @@ const SECTIONS = [
     fields:[
       {id:"vacinas_gestacao", label:"Quais vacinas você já tomou nesta gestação?", type:"textarea",
        hint:"dTpa (coqueluche), influenza, covid, hepatite B, VSR. Se não lembrar, tudo bem."},
-      {id:"vacinas_duvidas", label:"Tem dúvidas sobre as vacinas do bebê?", type:"textarea"},
-      {id:"clinica_vacina", label:"Já pensaram onde o bebê vai se vacinar?", type:"radio",
-       options:["Posto de saúde","Clínica particular","Ainda não pensamos"]}
+      {id:"vacinas_duvidas", label:"Tem dúvidas sobre as vacinas do bebê?", type:"textarea"}
     ]
   },
   {
@@ -383,7 +379,6 @@ const SECTIONS = [
     sub:"Essa consulta é de vocês. Me diga o que importa.",
     fields:[
       {id:"expectativas", label:"O que vocês mais esperam desta consulta?", type:"textarea", required:true, tall:true},
-      {id:"preocupacoes", label:"Existe alguma preocupação específica rondando vocês?", type:"textarea"},
       {id:"observacoes", label:"Mais alguma coisa que eu precise saber?", type:"textarea"}
     ]
   }
