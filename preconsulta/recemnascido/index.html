@@ -272,7 +272,6 @@ const SECTIONS = [
     fields:[
       {id:"crianca_nome", label:"Nome completo do bebê", type:"text", required:true},
       {id:"crianca_nascimento", label:"Data de nascimento", type:"date", required:true, age:true},
-      {id:"hora_nascimento", label:"Hora do nascimento", type:"text", placeholder:"Ex.: 14h20"},
       {id:"consulta_data", label:"Data prevista da consulta", type:"date"},
       {id:"responsavel_nome", label:"Quem está preenchendo esta ficha", type:"text", required:true},
       {id:"responsavel_parentesco", label:"Parentesco", type:"radio", options:["Mãe","Pai","Avó ou avô","Outro"]},
@@ -311,7 +310,6 @@ const SECTIONS = [
       {id:"idade_gestacional", label:"Com quantas semanas o bebê nasceu?", type:"text", required:true, placeholder:"Ex.: 39 semanas e 2 dias"},
       {id:"peso_nascer", label:"Peso ao nascer", type:"text", required:true, placeholder:"Ex.: 3.240 g"},
       {id:"comprimento", label:"Comprimento e perímetro cefálico", type:"text", placeholder:"Ex.: 49 cm e 34 cm"},
-      {id:"apgar", label:"Apgar", type:"text", placeholder:"Ex.: 9 e 10"},
       {id:"intercorrencias_parto", label:"Houve alguma intercorrência no parto ou logo após?", type:"textarea",
        hint:"Precisou de oxigênio, UTI neonatal, fototerapia por icterícia, antibiótico?"},
       {id:"alta_peso", label:"Com quanto peso teve alta da maternidade?", type:"text"},
@@ -385,11 +383,9 @@ const SECTIONS = [
       {id:"genitores_saude", label:"Os pais têm algum problema de saúde?", type:"textarea",
        hint:"Alergia, asma, rinite, dermatite, tireoide, diabetes."},
       {id:"familia_doencas", label:"Alguma doença importante na família?", type:"textarea"},
-      {id:"quem_mora", label:"Quem mora na casa?", type:"text"},
       {id:"fumantes", label:"Alguém fuma dentro de casa?", type:"radio", options:["Não","Sim"]},
       {id:"animais", label:"Têm animais em casa?", type:"text"},
-      {id:"doente_casa", label:"Tem alguém doente ou gripado em casa agora?", type:"radio", options:["Não","Sim"]},
-      {id:"apoio", label:"Quem está ajudando vocês nesses primeiros dias?", type:"text"}
+      {id:"doente_casa", label:"Tem alguém doente ou gripado em casa agora?", type:"radio", options:["Não","Sim"]}
     ]
   },
   {
